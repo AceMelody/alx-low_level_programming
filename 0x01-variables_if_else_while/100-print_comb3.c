@@ -19,11 +19,11 @@ int main(void)
 			{
 				putchar(u);
 				putchar(v);
-			}
-			if ((u != 56) || ((u == 56) && (v != 57)))
-			{
-				putchar(',');
-				putchar(' ');
+				if (u != 56 || ((u == 56) && (v != 57)))
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
