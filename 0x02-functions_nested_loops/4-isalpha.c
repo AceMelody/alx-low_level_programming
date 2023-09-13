@@ -2,7 +2,7 @@
 
 /**
  * _isalpha - checks if input is an alphabetic character
- * @int c: input taken as the function's argument
+ * @c: input taken as the function's argument
  *
  * Return: 1, if c is a letter. 0, if c is not a letter
  */
