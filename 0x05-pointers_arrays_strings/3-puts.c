@@ -2,7 +2,7 @@
 
 /**
  * _puts - prints a string followed by a new lind to stdout
- * @*str- points to thestring that is printed
+ * @str- points to thestring that is printed
  *
  * Return: nothing
  */
