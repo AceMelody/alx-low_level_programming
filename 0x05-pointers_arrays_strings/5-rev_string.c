@@ -10,11 +10,8 @@
 
 void rev_string(char *s)
 {
-	char q[] = *s;
-	int r;
-
-	for (q[r] = NULL; q[r] >= q[0]; --r)
+	for (*s = '\0'; *s--; --*s)
 	{
-		_putchar(q[r]);
+		_putchar(s);
 	}
 }
