@@ -16,9 +16,12 @@ void times_table(void)
 		{
 			x = v * w;
 			_putchar(x);
-			_putchar(',');
-			_putchar(' ');
-			_putchar(' ');
+			if (v < 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+			}
 		}
 		_putchar('\n');
 	}
