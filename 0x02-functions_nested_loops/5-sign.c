@@ -2,9 +2,9 @@
 
 /**
  * print_sign - prints the sign that precedes an integer
- * @n : the number whose sign is checked
+ * @n: the number whose sign is checked
  *
- * Return : 1, if posistive, 0, if zero, -1, if negative
+ * Return: 1, if posistive, 0, if zero, -1, if negative
  */
 
 int print_sign(int n)
