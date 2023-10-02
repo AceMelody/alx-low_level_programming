@@ -5,7 +5,7 @@
  * @a: the first integer
  * @b: the second integer
  *
- * Return: 0, on success
+ * Return: the product
  */
 
 int mul(int a, int b)
@@ -13,6 +13,5 @@ int mul(int a, int b)
 	int c;
 
 	c = a * b;
-	_putchar(c);
-	return (0);
+	return (c);
 }
