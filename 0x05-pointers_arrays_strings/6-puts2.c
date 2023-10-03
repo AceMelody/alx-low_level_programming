@@ -9,12 +9,14 @@
 
 void puts2(char *str)
 {
-	while (*str != '\0')
+	int w = 0;
+
+	while (str[w] != '\0')
 	{
-		if (str % 2 == 0)
+		if (w % 2 == 0)
 		{
-			_putchar(*str);
-			str++;
+			_putchar(str[w]);
 		}
+		w++;
 	}
 }
