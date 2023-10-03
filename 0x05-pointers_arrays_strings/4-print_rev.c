@@ -3,6 +3,9 @@
 /**
  * print_rev - prints a string in reverse followed by a new line
  * @s: points to the string that is to be printed in reverse
+ * 
+ * _strlen - gives the length of a string
+ * @s: the string
  *
  * Return: nothing
  */
