@@ -10,5 +10,5 @@
 void rev_string(char *s)
 {
 	for (*s = '\0'; s--; --s)
-		_putchar(s);
+		_putchar(*s);
 }
