@@ -12,8 +12,8 @@ void rev_string(char *s)
 {
 	int f, v;
 
-	v = _strlen(*s);
-	for (f = v - 1; f >= 0; f--)
+	v = _strlen(s) - 1;
+	for (f = v; f >= 0; f--)
 		_ putchar(*s[f]);
 }
 
