@@ -8,7 +8,7 @@
  * Return: the sum of @f and @g
  */
 
-int add (int f, int g)
+int add(int f, int g)
 {
 	int h;
 
