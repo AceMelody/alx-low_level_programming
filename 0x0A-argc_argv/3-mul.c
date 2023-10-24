@@ -6,11 +6,10 @@
  * @argc: the number of arguments
  * @argv: an array of tge arguments
  *
- * Return: 1, on error
- * 	0, on success
+ * Return: 1, on error, and 0 on success
  */
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int n, x;
 
