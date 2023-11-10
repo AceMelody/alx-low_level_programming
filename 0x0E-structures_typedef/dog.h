@@ -3,7 +3,7 @@
 
 /**
  * struct dog - has the attributes of a dog
- * @nane: the dog's name
+ * @name: the dog's name
  * @age: age of the dog
  * @owner: name of the person who owns the dog
  */
@@ -14,5 +14,10 @@ struct dog
 	float age;
 	char *owner;
 };
+
+void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
+
+typedef struct dog dog_t;
 
 #endif /* DOG */
