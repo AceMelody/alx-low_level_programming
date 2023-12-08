@@ -8,11 +8,11 @@
  * Return: address of the new node
  */
 
-dlist_t *add_dnodeint(dlistint_t **head, const int n)
+dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	dlistint_t *newnd;
 
-	newnd = (dlistint_t *)malloc(sizeof(dlisint_t));
+	newnd = (dlistint_t *)malloc(sizeof(dlistint_t));
 	if (newnd == NULL)
 		return (NULL);
 	newnd->n = n;
