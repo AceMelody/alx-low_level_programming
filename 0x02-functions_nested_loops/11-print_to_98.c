@@ -2,21 +2,44 @@
 
 /**
  * print_to_98 - prints numbers from @n to 98
- * @n: number that initializes the count
+ * @n: beginning of count
  *
  * Return: nothing
  */
-
 void print_to_98(int n)
 {
-	while (n <= 98)
+	int b = 98;
+
+	if (n < b)
 	{
-		_putchar(n + '0');
-		n++;
+		while (n < b)
+		{
+			if (n <= 9)
+				_putchar(n + '0');
+			else
+			{
+				_putchar((n / 10) + '0');
+				_putchar((n % 10) + '0');
+			}
+			_putchar(',');
+			_putchar(' ');
+			n++;
+		}
 	}
-	while (n >= 98)
+	else if (n > b)
 	{
-		_putchar(n + '0');
-		n--;
+		while (n > b)
+		{
+			if (n > b + 1)
+				_putchar((n / 100) + '0');
+			_putchar(((n / 10) % 10) + '0');
+			_putchar((n % 10) + '0');
+			_putchar(',');
+			_putchar(' ');
+			n--;
+		}
 	}
+	_putchar((b / 10) + '0');
+	_putchar((b % 10) + '0');
+	_putchar('\n');
 }
