@@ -10,16 +10,21 @@ void print_to_98(int n)
 {
 	int b = 98;
 
-	if (n < b)
+	if (n < b )
 	{
 		while (n < b)
 		{
-			if (n <= 9)
+			if (n <= 9 || n >= -9)
 				_putchar(n + '0');
-			else
+			else if (n > 9 || n < -9)
 			{
-				_putchar((n / 10) + '0');
-				_putchar((n % 10) + '0');
+				if (n < -(b + 1))
+					_putchar((n / 100) + '0');
+					_putchar(((n / 10) % 10) + '0');
+					_putchar((n % 10) + '0');
+				else
+					_putchar((n / 10) + '0');
+					_putchar((n % 10) + '0');
 			}
 			_putchar(',');
 			_putchar(' ');

@@ -25,6 +25,7 @@ int main(void)
 		if (j % 2 == 0)
 			total += j;
 	}
+	total += k;
 	printf("%d\n", total);
 
 	return (0);
