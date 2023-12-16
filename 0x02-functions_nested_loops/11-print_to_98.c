@@ -12,13 +12,14 @@ void print_to_98(int n)
 	{
 		while (n < 98)
 		{
-			if (n < 0)
-			{
-				n *= -1;
-				_putchar('-');
-				n--;
-			}
 			if (n <= 9)
+				while (n < 0)
+				{
+					n *= -1;
+					_putchar ('-');
+					n--;
+					n = -n;
+				}
 				_putchar(n + '0');
 			else if (n > 9)
 			{
