@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - prints the sum of all multiples of 3 and 5 not exceeding and excluding 1024
+ * main - prints the sum of all multiples of 3 and 5 not exceeding and 
+ * excluding 1024
  *
  * Return: 0 on success
  */

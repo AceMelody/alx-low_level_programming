@@ -9,6 +9,7 @@ int main(void)
 {
 	int i, j = 1, k = 2, sum = 0, total = 0;
 
+	total += k;
 	for (i = 0; sum < 4000000; i++)
 	{
 		if (j < k)
@@ -25,7 +26,6 @@ int main(void)
 		if (j % 2 == 0)
 			total += j;
 	}
-	total += k;
 	printf("%d\n", total);
 
 	return (0);
