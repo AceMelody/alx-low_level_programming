@@ -11,14 +11,23 @@ int main(void)
 
 	for (w = 1; w <= 100; w++)
 	{
-		if (w % 3 && w % 5)
+		if ((w % 3 == 0) && (w % 5 == 0))
+		{
 			printf("FizzBuzz");
-		else if (w % 5)
+		}
+		else if (w % 5 == 0)
+		{
 			printf("Buzz");
-		else if (w % 3)
+		}
+		else if (w % 3 == 0)
+		{
 			printf("Fizz");
+		}
 		else
+		{
 			printf("%d", w);
+		}
+
 		if (w <= 99)
 			putchar(' ');
 		else
