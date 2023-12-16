@@ -11,31 +11,41 @@ int main(void)
 {
 	int e, f, g, h;
 
-	for (e = 48; e <= 57; e++)
+	for (e = 0; e <= 9; e++)
 	{
-		for (f = 48; f <= 57; e++)
+		for (f = 0; f <= 9; e++)
 		{
-			for (g = 48; g <= 57; g++)
+			for (g = 0; g <= 9; g++)
 			{
-				for(h = 58; h <= 57; h++)
+				for(h = 0; h <= 9; h++)
 				{
 					if (e < f && g < h)
 					{
-						putchar(e);
-						putchar(f);
-						putchar(' ');
-						putchar(g);
-						putchar(h);
-						if (e == 57 && e + f + g + h != 227)
+						if ((g == h == 0) && f > 0)
+						{
+							break;
+						}
+						else
+						{
+							putchar(e);
+							putchar(f);
+							putchar(' ');
+							putchar(g);
+							putchar(h);
+						}
+						if ((e == 9 && f < 9) || (e < 9 && f <= 9))
 						{
 							putchar(',');
 							putchar(' ');
+						}
+						else
+						{
+							putchar('\n');
 						}
 					}
 				}
 			}
 		}
 	}
-	putchar('\n');
 	return (0);
 }
