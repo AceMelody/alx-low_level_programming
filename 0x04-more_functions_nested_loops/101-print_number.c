@@ -56,5 +56,4 @@ void print_number(int n)
 	}
 	if (n > 9)
 		_putchar(k + '0');
-	_putchar('\n');
 }
