@@ -42,7 +42,7 @@ void print_number(int n)
 			_putchar(0 + '0');
 			v /= 10;
 		}
-		while ((k -v) > 0)
+		while ((k - v) > 0)
 		{
 			_putchar((k / v) + '0');
 			k = k % v;
