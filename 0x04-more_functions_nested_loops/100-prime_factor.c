@@ -7,19 +7,22 @@
  */
 int main(void)
 {
-	int v = 2;
+	int v = 2, k = v;
 	long int n = 612852475143;
 
 	while (n > 1)
 	{
 		if (n % v == 0)
 		{
-			printf("%d ", v);
 			n /= v;
+			if (k < v)
+			{
+				k = v;
+			}
 		}
 		else
 			v++;
 	}
-	putchar('\n');
+	printf("%d\n", k);
 	return (0);
 }
