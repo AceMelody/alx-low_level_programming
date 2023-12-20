@@ -3,7 +3,7 @@
 /**
  * main - prints the prime factor of 612852475143
  *
- * Retuen: 0 on success
+ * Return: 0 on success
  */
 int main(void)
 {
