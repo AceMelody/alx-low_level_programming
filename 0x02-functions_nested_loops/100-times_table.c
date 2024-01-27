@@ -22,24 +22,21 @@ void print_times_table(int n)
 				if (prod > 9 && prod <= 99)
 				{
 					_putchar((prod / 10) + '0');
-					_putchar((prod % 10) + '0');
 				}
 				else if (prod > 99)
 				{
 					_putchar((prod / 100) + '0');
 					_putchar(((prod / 10) % 10) + '0');
-					_putchar((prod % 10) + '0');
 				}
-				else
-					_putchar(prod + '0');
+				_putchar(prod % 10 + '0');
 				if (j < n)
 				{
 					_putchar(',');
+					if (((j + 1) * i) <= 99)
+						_putchar(' ');
+					if (((j + 1) * i) <= 9)
+						_putchar(' ');
 					_putchar(' ');
-					if (prod < 99)
-						_putchar(' ');
-					if (prod < 9)
-						_putchar(' ');
 				}
 				else
 					_putchar('\n');
