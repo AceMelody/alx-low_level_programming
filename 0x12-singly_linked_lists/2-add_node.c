@@ -13,9 +13,9 @@ list_t *add_node(list_t **head, const char *str)
 	static list_t *node;
 
 	node = (list_t *) malloc(sizeof(list_t));
-	if (node == '\0')
-		return ('\0');
-	if (head == '\0')
+	if (node == NULL)
+		return (NULL);
+	if (head == NULL)
 		head = node;
 	else
 	{
