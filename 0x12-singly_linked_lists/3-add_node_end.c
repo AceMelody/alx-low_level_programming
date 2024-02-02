@@ -21,12 +21,34 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 	else
 	{
-		while (*head->next != NULL)
-			head = *head->next;
-		head->next = node;
+		temp = *head;
+		while (temp->next != NULL)
+			temp = temp->next;
+		temp->next = node;
+		temp = temp->next;
 		node->next = NULL;
 	}
 	node->str = strdup(str);
+	node->len = _strlen(str);
 
-	return (*head);
+	return (temp);
+}
+
+/**
+ * _strlen - computes the length of a string
+ * @s: the string
+ *
+ * Return: the length of the string
+ */
+
+unsigned int _strlen(const char *s)
+{
+	unsigned int n = 0;
+
+	while (*s != '\0')
+	{
+		n++;
+		s++;
+	}
+	return (n);
 }

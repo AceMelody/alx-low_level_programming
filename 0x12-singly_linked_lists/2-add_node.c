@@ -19,13 +19,32 @@ list_t *add_node(list_t **head, const char *str)
 	{
 		*head = node;
 		node->next = NULL;
-		node->str = strdup(str);
 	}
 	else
 	{
 		node->next = *head;
-		node->str = strdup(str);
 		*head = node;
 	}
+	node->str = strdup(str);
+	node->len = _strlen(str);
 	return (*head);
+}
+
+/**
+ * _strlen - computes the length of a string
+ * @s: the string
+ *
+ * Return: length of the string
+ */
+
+unsigned int _strlen(const char *s)
+{
+	unsigned int n = 0;
+
+	while (*s != '\0')
+	{
+		n++;
+		s++;
+	}
+	return (n);
 }
