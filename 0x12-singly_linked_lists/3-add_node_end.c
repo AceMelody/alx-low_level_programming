@@ -8,23 +8,25 @@
  * Return: the address of the new element
  */
 
-list_t *add_node_end(list_t ** head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
-	static list_t *node;
+	list_t *node, *temp;
 
 	node = (list_t *) malloc(sizeof(list_t));
 	if (node == NULL)
 		return (NULL);
-	if (head == NULL)
-		head = node;
+	if (*head == NULL)
+	{
+		*head = node;
+	}
 	else
 	{
-		while (head->next != NULL)
-			head = head->next;
+		while (*head->next != NULL)
+			head = *head->next;
 		head->next = node;
 		node->next = NULL;
 	}
 	node->str = strdup(str);
 
-	return (&node);
+	return (*head);
 }
