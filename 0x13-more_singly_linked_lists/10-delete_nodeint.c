@@ -15,7 +15,7 @@ int delete_nodeint_at_index(listint_t ** head, unsigned int index)
 	int p;
 
 	temp = *head;
-	len = listint_len(*head) - 1;
+	len = list_len(*head) - 1;
 	if (index > len)
 		return (-1);
 	index--;
@@ -29,12 +29,12 @@ int delete_nodeint_at_index(listint_t ** head, unsigned int index)
 }
 
 /**
- * listint_len - finds the length of a listint_t list
+ * list_len - finds the length of a listint_t list
  * @h: the head of the list
  *
  * Return: the length of the list
  */
-unsigned int listint_len(listint_t * h)
+unsigned int list_len(listint_t * h)
 {
 	unsigned int c = 0;
 

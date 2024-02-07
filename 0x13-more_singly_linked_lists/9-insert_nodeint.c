@@ -16,7 +16,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	lisint_t *temp, *node;
 
 	temp = *head;
-	len = listint_len(temp) - 1;
+	len = list_len(temp) - 1;
 	if (idx > len)
 		return (NULL);
 	node = (listint_t *) malloc(sizeof(listint_t));
@@ -33,13 +33,13 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 }
 
 /**
- * listint_len - finds the length of a list
+ * list_len - finds the length of a list
  * @h: the head if the list
  *
  * Return: length of the list
  */
 
-unsigned int listint_len(listint_t *h)
+unsigned int list_len(listint_t *h)
 {
 	unsigned int c = 0;
 
