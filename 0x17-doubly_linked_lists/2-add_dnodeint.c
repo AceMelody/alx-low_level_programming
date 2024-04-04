@@ -13,7 +13,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 
 	newnd = (dlistint_t *) malloc(sizeof(dlistint_t));
 	if (newnd == NULL)
-		return (EXIT_FAILURE);
+		return (NULL);
 	newnd->n = n;
 	newnd->prev = NULL;
 	newnd->next = *head;
