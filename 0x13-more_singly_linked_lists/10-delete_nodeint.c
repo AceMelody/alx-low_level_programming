@@ -10,39 +10,24 @@
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t *temp, *index;
-	unsigned int len;
-	int p;
+	unsigned int len = 0, k;
+	listint_t *temp, *prev, *trav;
 
-	temp = *head;
-	len = list_len(*head) - 1;
-	if (index > len)
+	temp = trav = *head;
+	while (trav != NULL)
+	{
+		trav = trav->next;
+		len++;
+	}
+	if (index >= len || index < 0)
 		return (-1);
-	index--;
-	for (p = 0; p < index; p++;)
+	for (k = 0; k < index; k++)
+	{
+		prev = temp;
 		temp = temp->next;
-	index = temp->next;
-	temp = index->next;
-	free(index);
+	}
+	prev->next = temp->next;
+	free(temp);
 
 	return (1);
-}
-
-/**
- * list_len - finds the length of a listint_t list
- * @h: the head of the list
- *
- * Return: the length of the list
- */
-unsigned int list_len(listint_t *h)
-{
-	unsigned int c = 0;
-
-	while (h != NULL)
-	{
-		c++;
-		h = h->next;
-	}
-
-	return (c);
 }
