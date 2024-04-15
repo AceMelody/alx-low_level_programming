@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * _strcat - concatenates a specified size of a string to another
+ * _strncat - concatenates a specified size of a string to another
  * @ dest: the string that is concatenated to
  * @src: the string that is concatenated
  * @n: the size in bytes of the string that is concatenated
  *
  * Return: pointer to the resulting string
  */
-char *_strcat(char *dest, char *src, int n)
+char *_strncat(char *dest, char *src, int n)
 {
 	int length, m, p;
 
@@ -39,5 +39,6 @@ int _strlen(char *s)
 		n++;
 		s++;
 	}
-	
+
+	return (n);
 }

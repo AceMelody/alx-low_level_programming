@@ -13,7 +13,7 @@ char *_strcat(char *dest, char *src)
 
 	v = _strlen(dest);
 	dest[v] = ' ';
-	for (k = v; *src != '\0'; ++k)
+	for (k = v + 1; *src != '\0'; ++k)
 	{
 		for (w = 0; src[w] != '\0'; w++)
 		{
@@ -22,7 +22,7 @@ char *_strcat(char *dest, char *src)
 	}
 	dest[k] = '\0';
 	_putchar('\n');
-	return (*dest);
+	return (dest);
 }
 /**
  * _strlen - gives the length of a string
