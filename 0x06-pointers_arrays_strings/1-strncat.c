@@ -2,7 +2,7 @@
 
 /**
  * _strncat - concatenates a specified size of a string to another
- * @ dest: the string that is concatenated to
+ * @dest: the string that is concatenated to
  * @src: the string that is concatenated
  * @n: the size in bytes of the string that is concatenated
  *
