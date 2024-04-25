@@ -10,7 +10,6 @@
 void puts_half(char *str)
 {
 	int k;
-	char p;
 
 	k = _strlen(str);
 	if (k % 2 == 0)
@@ -41,16 +40,4 @@ int _strlen(char *s)
 		s++;
 	}
 	return (n);
-}
-
-int main(void)
-{
-	char *str;
-
-	str = "Holberton!";
-	puts_half(str);
-	str = "Hello Ace!";
-	puts_half(str);
-
-	return (0);
 }

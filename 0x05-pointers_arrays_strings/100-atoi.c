@@ -24,5 +24,5 @@ int _atoi(char *s)
 	while (*s != '\0')
 		num = num * 10 + (*s - '0');
 
-	return (sign * res);
+	return (sign * num);
 }
