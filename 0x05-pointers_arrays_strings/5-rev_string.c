@@ -9,17 +9,16 @@
 
 void rev_string(char *s)
 {
-	int f, v, i = 0;
-	char t;
+	int f, v, i;
+	char p;
 
 	v = _strlen(s) - 1;
-	for (f = v; f != 0; f--)
+	for (f = v, i = 0; f >= i; f--, i++)
 	{
-		*(t + i) = s[f];
-		i++;
+		p = *(s + i);
+		*(s + i) = *(s + f);
+		*(s + f) = p;
 	}
-	*(t + i) = s[f];
-	*s = *t;
 }
 /**
  * _strlen - gives the length of a string
@@ -38,16 +37,4 @@ int _strlen(char *s)
 		s++;
 	}
 	return (n);
-}
-
-#include <stdio.h>
-
-int main(void)
-{
-	char s[] = "Hello progrwmming";
-
-	printf("%s\n", s);
-	rev_string(s);
-	printf("%s\n", s);
-	return (0);
 }
